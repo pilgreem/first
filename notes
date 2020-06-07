@@ -1,0 +1,74 @@
+
+
+# create a local repo on the macbook, see # https://www.learnenough.com/git-tutorial/getting_started
+
+# create user for all your checkins
+$ git config --global user.name "Your Name"
+$ git config --global user.email your.email@example.com
+
+# create files
+# add, commit files (cannot push just yet because there is no remote repo)
+
+# signup at github
+# pilgreem / t7urX3K2dqBJ2hZ
+# remote repo https://github.com/pilgreem/first.git
+
+# invited vatsa@hotmail.com
+# svnaga / t7urX3K2dqBJ2hZ
+
+# create a new repository on the command line
+echo "# first" >> README.md
+$ git init
+$ git add README.md
+$ git commit -m "first commit"
+$ git remote add origin https://github.com/pilgreem/first.git
+$ git push -u origin master
+  - push branch to remote
+  - -u is the option to set upstream
+  - destination is origin
+  - branch is master
+
+# …or push an existing repository from the command line
+$ git remote add origin https://github.com/pilgreem/first.git
+$ git push -u origin master
+
+# find the remote copy of your local copy
+$ git remote -v
+
+
+# create file
+$ touch afile
+
+# track file in git
+$ git add -A afile
+
+# stage file
+$ git commit -m "committing file"
+
+# commit as a different user
+$ git commit --author="svnaga <vatsa@hotmail.com>" -m "committing q"
+
+# git push origin master
+$ git push
+  - after the first occurence of push setup the remote, simply use git push, it will use defaults
+
+# amend commit message
+$ git commit --amend 
+
+# change commit file content
+$ modify file
+$ git add
+$ git commit --amend
+
+# removing the last commit
+$ git reset --hard HEAD^
+
+# removing the last 2 commits <= this removes in local branch
+$ git reset --hard HEAD~2
+
+# force pushing the removed to remote branch
+# https://stackoverflow.com/questions/3293531/how-to-permanently-remove-few-commits-from-remote-branch
+$ git push --force
+
+
+####
