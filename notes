@@ -53,12 +53,15 @@ $ git push
   - after the first occurence of push setup the remote, simply use git push, it will use defaults
 
 # amend commit message
+# https://git-scm.com/book/en/v2/Git-Tools-Rewriting-History
 $ git commit --amend 
+$ git commit --amend --no-edit
 
 # change commit file content
 $ modify file
 $ git add
 $ git commit --amend
+
 
 # removing the last commit
 $ git reset --hard HEAD^
